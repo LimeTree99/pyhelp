@@ -1,5 +1,5 @@
 import pygame
-
+import os
 
 
 
@@ -9,7 +9,7 @@ class main:
                  width,
                  height,
                  window_name,
-                 corner_image = 'C:/Users/verdon/programs/Python36-64/Lib/site-packages/pyhelp/images/flower_corner_image.png',
+                 corner_image = os.path.split(__file__)[0] + '/images/flower_corner_image.png',
                  framerate = 60):
         
         self.width = width
@@ -57,5 +57,6 @@ class main:
 
 
 if __name__ == '__main__':
+    
     game = main(800, 500, 'Working Title')
     game.run()
